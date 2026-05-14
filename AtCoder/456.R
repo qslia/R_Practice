@@ -9,17 +9,21 @@ favorable <- 0
 total <- 0
 
 for (i in 1:6) {
-  for (j in 1:6) {
-    for (k in 1:6) {
-      total <- total + 1
-      values <- c(die1[i], die2[j], die3[k])
-      # Check if values are exactly 4, 5, 6 (each once)
-      sorted_vals <- sort(values)
-      if (sorted_vals[1] == 4 && sorted_vals[2] == 5 && sorted_vals[3] == 6) {
-        favorable <- favorable + 1
-      }
-    }
-  }
+	for (j in 1:6) {
+		for (k in 1:6) {
+			total <- total + 1
+			values <- c(die1[i], die2[j], die3[k])
+			# Check if values are exactly 4, 5, 6 (each once)
+			sorted_vals <- sort(values)
+			if (
+				sorted_vals[1] == 4 &&
+					sorted_vals[2] == 5 &&
+					sorted_vals[3] == 6
+			) {
+				favorable <- favorable + 1
+			}
+		}
+	}
 }
 # print(total)
 # print(favorable)
